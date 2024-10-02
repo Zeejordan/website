@@ -1,0 +1,24 @@
+1. spinner
+2. topbar
+3. navbar and hero
+4. About
+5. Services 
+6. Destination
+7. ExploreTour
+8. packages
+9. Gallery
+10 Tour booking
+11. Travel Guide
+12. blog
+13.Testimonial
+
+4. header
+5. 404 (isko app.jsx mai render nahi karwaya)
+6. subscribe
+7. Footer
+8. copyright
+9. BackToTop
+
+
+--------------------
+navbar and hero k andar hai carousel  in home.jsx
