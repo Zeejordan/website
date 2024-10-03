@@ -7,7 +7,7 @@ function Services() {
     return (
         <>
             {/* <!-- Services Start --> */}
-            <div className="container-fluid bg-light service py-5">
+            <div id="services" className="container-fluid bg-light service py-5">
                 <div className="container py-5">
                     <div className="mx-auto text-center mb-5" style={{ maxWidth: '900px' }}>
                         <h5 className="section-title px-3">Services</h5>

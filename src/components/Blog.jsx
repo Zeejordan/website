@@ -4,7 +4,7 @@ function Blog() {
   return (
     <>
     {/* <!-- Blog Start --> */}
-        <div className="container-fluid blog py-5">
+        <div id="blog" className="container-fluid blog py-5">
             <div className="container py-5">
                 <div className="mx-auto text-center mb-5" style={{maxWidth: '900px'}}>
                     <h5 className="section-title px-3">Our Blog</h5>

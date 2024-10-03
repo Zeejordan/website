@@ -6,7 +6,7 @@ function Contact() {
     return (
         <>
             {/* <!-- Contact Start --> */}
-            <div className="container-fluid contact bg-light py-5">
+            <div id="contact" className="container-fluid contact bg-light py-5">
                 <div className="container py-5">
                     <div className="mx-auto text-center mb-5" style={{maxWidth: '900px'}}>
                         <h5 className="section-title px-3">Contact Us</h5>

@@ -1,11 +1,25 @@
 import React from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useEffect,useState } from 'react'
 
 
 function NavbarAndHero() {
-    const location = useLocation()
-    // console.log(location)
 
+
+    const location = useLocation()
+    const [activeHash,setActiveHash] = useState(location.hash)
+
+    useEffect(()=>{
+        const handleHashChange = () => {
+            setActiveHash(window.location.hash);
+        }
+
+        window.addEventListener('hashchange', handleHashChange);
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    },[])
+    console.log(activeHash);
     return (
         <>
             {/* {<!-- Navbar & Hero Start --> */}
@@ -20,28 +34,23 @@ function NavbarAndHero() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <div className="navbar-nav ms-auto py-0">
-                            <Link to='/'>
-                                <a className={`nav-item nav-link ${location.pathname == '/' && "active"}`}>Home</a>
-                            </Link>
-                            <Link to='/about'>
-                                <a className={`nav-item nav-link ${location.pathname == '/about' && "active"}`}>About</a>
-                            </Link>
 
-                            <Link to='/services'>
-                                <a className={`nav-item nav-link ${location.pathname == '/services' && "active"}`}>Services</a>
-                            </Link>
+                            <a href="#" className={`nav-item nav-link ${activeHash === '' ? 'active' : ''}`}>Home</a>
+                            <a href="#aboutUs" className={`nav-item nav-link ${activeHash === '#aboutUs' ? 'active' : ''}`}>About</a>
+                            <a href="#services" className={`nav-item nav-link ${activeHash === '#services' ? 'active' : ''}`}>Services</a>
+                            <a href="#destination" className={`nav-item nav-link ${activeHash === '#destination' ? 'active' : ''}`}>Destination</a>
+                            <a href="#exploreTour" className={`nav-item nav-link ${activeHash === '#exploreTour' ? 'active' : ''}`}>Explore</a>
+                            <a href="#gallery" className={`nav-item nav-link ${activeHash === '#gallery' ? 'active' : ''}`}>Gallery</a>
 
                             {/* <Link to='/packages'>
                                 <a className={`nav-item nav-link ${location.pathname == '/packages' && "active"}`}>Packages</a>
                             </Link> */}
 
-                            <Link to='/blog'>
-                                <a className={`nav-item nav-link ${location.pathname == '/blog' && "active"}`}>Blog</a>
-                            </Link>
+                            <a href="#blog" className={`nav-item nav-link ${activeHash === '#blog' ? 'active' : ''}`}>Blog</a>
 
 
 
-                            <div className="nav-item dropdown" hidden>
+                            {/* <div className="nav-item dropdown" hidden>
                                 <a href="#" className={`nav-link dropdown-toggle ${['/destination', '/tour', '/booking', '/gallery', '/guides', '/testimonial', '/404'].includes(location.pathname) && "active"}`} data-bs-toggle="dropdown">Pages</a>
                                 <div className="dropdown-menu m-0">
                                     <Link to='/destination'>
@@ -72,11 +81,8 @@ function NavbarAndHero() {
                                     </Link>
 
                                 </div>
-                            </div>
-                            <Link to='/contact'>
-                                <a className="nav-item nav-link">Contact</a>
-                            </Link>
-
+                            </div> */}
+                            <a href="#contact" className={`nav-item nav-link ${activeHash === '#contact' ? 'active' : ''}`}>Contact</a>
                         </div>
                         <a href="#bookNow" className="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
                     </div>
@@ -87,3 +93,6 @@ function NavbarAndHero() {
 }
 
 export default NavbarAndHero
+
+
+// stop stop

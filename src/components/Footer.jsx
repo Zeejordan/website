@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
     {/* <!-- Footer Start --> */}
-        <div className="container-fluid footer py-5">
+        <div id="footer" className="container-fluid footer py-5">
             <div className="container py-5">
                 <div className="row g-5">
                     <div className="col-md-6 col-lg-6 col-xl-3">
@@ -46,7 +46,7 @@ function Footer() {
                         </div>
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-3">
-                        <div className="footer-item">
+                        {/* <div className="footer-item">
                             <div className="row gy-3 gx-2 mb-4">
                                 <div className="col-xl-6">
                                     <form>
@@ -84,7 +84,7 @@ function Footer() {
                                 <a href="#" className="text-white me-2"><i className="fab fa-cc-paypal fa-2x"></i></a>
                                 <a href="#" className="text-white"><i className="fab fa-cc-discover fa-2x"></i></a>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

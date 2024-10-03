@@ -4,7 +4,7 @@ function ExploreTour() {
   return (
     <>
     {/* <!-- Explore Tour Start --> */}
-        <div className="container-fluid ExploreTour py-5">
+        <div id="exploreTour" className="container-fluid ExploreTour py-5">
             <div className="container py-5">
                 <div className="mx-auto text-center mb-5" style={{maxWidth: '900px'}}>
                     <h5 className="section-title px-3">Explore Tour</h5>

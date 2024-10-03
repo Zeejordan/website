@@ -16,13 +16,14 @@ import Footer from '../components/Footer'
 import Copyright from '../components/Copyright'
 import BackToTop from '../components/BackToTop'
 import { Carousel } from '../components/Carousel'
+import Contact from '../components/Contact'
 
 
 
     function HomePage() {
         return (
             <>
-                <Topbar />
+                {/* <Topbar /> */}
                 <NavbarAndHero />
                 <Carousel/>
                 <About />
@@ -36,8 +37,9 @@ import { Carousel } from '../components/Carousel'
                 <Blog/>
                 {/* <Testimonial/> */}
                 <Subscribe/>
+                <Contact/>
                 <Footer/>
-                <Copyright/>
+                {/* <Copyright/> */}
                 <BackToTop/>
             </>
         )

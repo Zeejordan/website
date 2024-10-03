@@ -4,7 +4,7 @@ function Destination() {
   return (
     <>
     {/* <!-- Destination Start --> */}
-        <div className="container-fluid destination py-5">
+        <div id="destination" className="container-fluid destination py-5">
             <div className="container py-5">
                 <div className="mx-auto text-center mb-5" style={{maxWidth: '900px'}}>
                     <h5 className="section-title px-3">Destination</h5>

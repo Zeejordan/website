@@ -4,7 +4,7 @@ function Gallery() {
   return (
     <>
     {/* <!-- Gallery Start --> */}
-        <div className="container-fluid gallery py-5 my-5">
+        <div id="gallery" className="container-fluid gallery py-5 my-5">
             <div className="mx-auto text-center mb-5" style={{maxWidth: '900px'}}>
                 <h5 className="section-title px-3">Our Gallery</h5>
                 <h1 className="mb-4">Tourism & Traveling Gallery.</h1>

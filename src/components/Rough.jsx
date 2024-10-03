@@ -299,6 +299,101 @@
 
 
 
+<div className="navbar-nav ms-auto py-0">
+                            <Link to='/'>
+                                <a className={`nav-item nav-link ${location.pathname == '/' && "active"}`}>Home</a>
+                            </Link>
+                            <Link to='/about'>
+                                <a className={`nav-item nav-link ${location.pathname == '/about' && "active"}`}>About</a>
+                            </Link>
+
+                            <Link to='/services'>
+                                <a className={`nav-item nav-link ${location.pathname == '/services' && "active"}`}>Services</a>
+                            </Link>
+
+                            {/* <Link to='/packages'>
+                                <a className={`nav-item nav-link ${location.pathname == '/packages' && "active"}`}>Packages</a>
+                            </Link> */}
+
+                            <Link to='/blog'>
+                                <a className={`nav-item nav-link ${location.pathname == '/blog' && "active"}`}>Blog</a>
+                            </Link>
+
+
+
+                            {/* <div className="nav-item dropdown" hidden>
+                                <a href="#" className={`nav-link dropdown-toggle ${['/destination', '/tour', '/booking', '/gallery', '/guides', '/testimonial', '/404'].includes(location.pathname) && "active"}`} data-bs-toggle="dropdown">Pages</a>
+                                <div className="dropdown-menu m-0">
+                                    <Link to='/destination'>
+                                        <a className="dropdown-item">Destination</a>
+                                    </Link>
+                                    <Link to='/tour'>
+                                        <a className="dropdown-item">Explore Tour</a>
+                                    </Link>
+
+                                    <Link to='/booking'>
+                                        <a className="dropdown-item">Travel Booking</a>
+                                    </Link>
+
+                                    <Link to='/gallery'>
+                                        <a className="dropdown-item">Our Gallery</a>
+                                    </Link>
+
+                                    <Link to='/guides'>
+                                        <a className="dropdown-item">Travel Guides</a>
+                                    </Link>
+
+                                    <Link to='/testimonial'>
+                                        <a className="dropdown-item">Testimonial</a>
+                                    </Link>
+
+                                    <Link to='/404'>
+                                        <a className="dropdown-item">404 Page</a>
+                                    </Link>
+
+                                </div>
+                            </div> */}
+                            <Link to='/contact'>
+                                <a className={`nav-item nav-link ${location.pathname == '/contact' && "active"}`}>Contact</a>
+                            </Link>
+                        </div>
+
+
+// how to make navbar elements active when we are on that
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const Navbar = () => {
+    const location = useLocation();
+    const [activeHash, setActiveHash] = useState(location.hash);
+
+    useEffect(() => {
+        const handleHashChange = () => {
+            setActiveHash(window.location.hash);  // Update activeHash when the hash changes
+        };
+
+        // Add hashchange listener
+        window.addEventListener('hashchange', handleHashChange);
+
+        // Cleanup listener on unmount
+        return () => {
+            window.removeEventListener('hashchange', handleHashChange);
+        };
+    }, []);
+
+    return (
+        <nav>
+            <a href="#home" className={`nav-item nav-link ${activeHash === '#home' ? 'active' : ''}`}>Home</a>
+            <a href="#aboutUs" className={`nav-item nav-link ${activeHash === '#aboutUs' ? 'active' : ''}`}>About</a>
+            <a href="#services" className={`nav-item nav-link ${activeHash === '#services' ? 'active' : ''}`}>Services</a>
+        </nav>
+    );
+};
+
+export default Navbar;
+
+
+
 
 
 

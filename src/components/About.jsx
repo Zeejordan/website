@@ -5,7 +5,7 @@ function About() {
     return (
         <>
             {/* <!-- About Start -->  img/about-img.jpg */}
-            <div className="container-fluid about py-5">
+            <div id="aboutUs" className="container-fluid about py-5">
                 <div className="container py-5">
                     <div className="row g-5 align-items-center">
                         <div className="col-lg-5">
